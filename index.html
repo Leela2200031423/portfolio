@@ -677,8 +677,246 @@
                 justify-content: center;
             }
         }
+/* Resume Section */
+.resume-section {
+    text-align: center;
+    padding: 60px 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+}
 
-</style>
+.resume-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.resume-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.resume-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 35px;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.download-btn:hover {
+    background-color: #d35400;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+.download-btn i {
+    font-size: 1.2rem;
+}
+
+/* Contact Section - REDUCED SIZE */
+.contact-section {
+    padding: 50px 0; /* Reduced from 80px */
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.contact-card {
+    max-width: 380px; /* Reduced from 600px */
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px; /* Reduced from 20px */
+    padding: 30px 25px; /* Reduced from 50px 40px */
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08); /* Reduced shadow */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+    opacity: 0.05;
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+.contact-card-content {
+    position: relative;
+    z-index: 1;
+}
+
+.contact-card h3 {
+    color: var(--primary-color);
+    font-size: 1.7rem; /* Reduced from 2.2rem */
+    margin-bottom: 10px; /* Reduced from 20px */
+    font-weight: 700;
+}
+
+.contact-card p {
+    color: var(--text-light);
+    font-size: 1.0rem; /* Reduced from 1.2rem */
+    margin-bottom: 20px; /* Reduced from 40px */
+    line-height: 1.6; /* Reduced from 1.8 */
+    max-width: 320px; /* Reduced from 480px */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-details-grid {
+    display: grid;
+    gap: 15px; /* Reduced from 25px */
+    margin-bottom: 20px; /* Reduced from 40px */
+}
+
+.contact-detail-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 15px; /* Reduced from 20px 25px */
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    border-radius: 9px; /* Reduced from 15px */
+    border-left: 2px solid var(--accent-color); /* Reduced from 4px */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04); /* Reduced shadow */
+}
+
+.contact-detail-item:hover {
+    transform: translateY(-1px); /* Reduced from -5px */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Reduced shadow */
+    border-left-color: var(--secondary-color);
+}
+
+.contact-icon {
+    width: 40px; /* Reduced from 50px */
+    height: 40px; /* Reduced from 50px */
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    border-radius: 8px; /* Reduced from 12px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px; /* Reduced from 20px */
+    color: white;
+    font-size: 1.1rem; /* Reduced from 1.3rem */
+    flex-shrink: 0;
+}
+
+.contact-text {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-text span {
+    display: block;
+    color: var(--text-color);
+    font-size: 0.9rem; /* Reduced from 1.1rem */
+    font-weight: 600;
+    word-break: break-word;
+}
+
+.contact-social-section {
+    margin-top: 20px; /* Reduced from 40px */
+    padding-top: 20px; /* Reduced from 30px */
+    border-top: 2px solid #f0f2f5;
+}
+
+.contact-social-title {
+    color: var(--primary-color);
+    font-size: 1.1rem; /* Reduced from 1.3rem */
+    font-weight: 600;
+    margin-bottom: 15px; /* Reduced from 20px */
+}
+
+.contact-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Reduced from 20px */
+}
+
+.contact-social-links a {
+    width: 40px; /* Reduced from 60px */
+    height: 40px; /* Reduced from 60px */
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 9px; /* Reduced from 15px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem; /* Reduced from 1.5rem */
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.contact-social-links a:hover {
+    transform: translateY(-3px) scale(1.00); /* Reduced scale from 1.1 */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Reduced shadow */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .contact-card {
+        margin: 0 20px;
+        padding: 20px 20px; /* Reduced from 40px 30px */
+        max-width: 400px; /* Reduced from default */
+    }
+    
+    .contact-card h3 {
+        font-size: 1.4rem; /* Reduced from 1.8rem */
+    }
+    
+    .contact-card p {
+        font-size: 0.9rem; /* Reduced from 1.1rem */
+    }
+    
+    .contact-detail-item {
+        padding: 9px 10px; /* Reduced from 15px 20px */
+    }
+    
+    .contact-icon {
+        width: 35px; /* Reduced from 45px */
+        height: 35px; /* Reduced from 45px */
+        margin-right: 9px; /* Reduced from 15px */
+    }
+    
+    .contact-text span {
+        font-size: 0.8rem; /* Reduced from 1rem */
+    }
+    
+    .contact-social-links a {
+        width: 40px; /* Reduced from 50px */
+        height: 40px; /* Reduced from 50px */
+        font-size: 1.1rem; /* Reduced from 1.3rem */
+    }
+    
+    .resume-content h2 {
+        font-size: 2rem;
+    }
+    
+    .download-btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -696,6 +934,8 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#platforms">Platforms</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact" class="btn btn-outline">Contact</a></li>
             </ul>
         </div>
     </header>
@@ -705,7 +945,7 @@
         <div class="container">
             <div class="hero-content">
                 <!-- Using your provided image path -->
-<img src="./assets/profile.jpg" alt="Leela Prasad" class="profile-image">
+ <img src="./assets/profile.jpg" alt="Leela Prasad" class="profile-image">
                 <h1>Leela Prasad Nadiminti</h1>
                 <h2>Computer Science Engineer</h2>
                 <p>A skilled and driven Computer Science and Engineering student with a strong passion for Full Stack Development and cutting-edge technologies. Training at designing, developing, and optimizing scalable applications, with a keen eye for problem-solving and innovation.</p>
@@ -926,7 +1166,7 @@
                 <div class="underline"></div>
             </div>
             
-            <div class="platforms-container">
+            <class class="platforms-container">
                 <!-- <div class="platform-item">
                     <div class="platform-icon">
                         <i class="fab fa-linkedin"></i>
@@ -977,5 +1217,181 @@
                     <h3>CodeForces</h3>
                     <a href="https://codeforces.com/profile/Leela_2200031423" target="_blank">View Profile</a>
                 </div>
+                </class>
+        <!-- Resume Section -->
+<section id="resume" class="resume-section">
+    <div class="container">
+        <div class="resume-content">
+            <h2><i class="fas fa-file-download"></i> Download Resume</h2>
+            <p>Get a comprehensive overview of my skills, experience, and achievements. Download my latest resume to learn more about my professional journey.</p>
+            <a href="#" class="download-btn" onclick="downloadResume()">
+                <i class="fas fa-download"></i>
+                Download PDF Resume
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Me Section -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Get In Touch</h2>
+            <div class="underline"></div>
+        </div>
+        
+        <div class="contact-card">
+            <div class="contact-card-content">
+                <h3>Let's Connect!</h3>
+                <p>I'm always interested in hearing about new opportunities, interesting projects, or just having a chat about technology. Feel free to reach out!</p>
                 
+                <div class="contact-details-grid">
+                    <div class="contact-detail-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <span>2200031423cseh@gmail.com</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <span>+91 8919677456</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <span>Vijayawada, Andhra Pradesh, India</span>
+                        </div>
+                    </div>
+                </div>
                 
+                <div class="contact-social-section">
+                    <h4 class="contact-social-title">Connect with me on</h4>
+                    <div class="contact-social-links">
+                        <a href="https://www.linkedin.com/in/nadiminti-leela-prasad-272418256" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Leela2200031423" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.codechef.com/users/leelaprasad121" target="_blank" title="CodeChef">
+                            <i class="fas fa-code"></i>
+                        </a>
+                        <a href="mailto:2200031423cseh@gmail.com" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+// Initialize EmailJS with your public key
+emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+// Resume Download Function - Direct link to OneDrive
+function downloadResume() {
+    // Replace this URL with your actual OneDrive share link
+    const oneDriveResumeUrl = 'https://drive.google.com/file/d/1caOAxxLzrjR8oBaNW9hWhgBLED4wQSBa/view?usp=sharing';
+    
+    // Open the OneDrive link in a new tab for download
+    window.open(oneDriveResumeUrl, '_blank');
+    
+    // Show success message
+    setTimeout(() => {
+        alert('Resume accessed successfully.');
+    }, 1000);
+}
+
+// Contact Form Submission using EmailJS
+function submitForm(event) {
+    event.preventDefault();
+    
+    const form = document.getElementById('contactForm');
+    const submitBtn = form.querySelector('.submit-btn');
+    const statusDiv = document.getElementById('formStatus');
+    
+    // Get form data
+    const formData = new FormData(form);
+    const data = {};
+    for (let [key, value] of formData.entries()) {
+        data[key] = value;
+    }
+    
+    // Show loading state
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    
+    // Use EmailJS to send email (you need to set up EmailJS account)
+    // Template parameters for EmailJS
+    const templateParams = {
+        from_name: `${data.firstName} ${data.lastName}`,
+        from_email: data.email,
+        phone: data.phone || 'Not provided',
+        designation: data.designation || 'Not provided',
+        company: data.company || 'Not provided',
+        subject: data.subject,
+        message: data.message,
+        to_email: '2200031423cseh@gmail.com'
+    };
+    
+    // Send email using EmailJS
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+        .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            
+            // Show success message
+            statusDiv.className = 'form-status success';
+            statusDiv.style.display = 'block';
+            statusDiv.innerHTML = '<i class="fas fa-check-circle"></i> Message sent successfully! I\'ll get back to you soon.';
+            
+            // Reset form
+            form.reset();
+            
+        }, function(error) {
+            console.log('FAILED...', error);
+            
+            // Show error message
+            statusDiv.className = 'form-status error';
+            statusDiv.style.display = 'block';
+            statusDiv.innerHTML = '<i class="fas fa-exclamation-circle"></i> Failed to send message. Please try again or contact directly via email.';
+        })
+        .finally(function() {
+            // Reset button
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+            
+            // Hide status message after 8 seconds
+            setTimeout(() => {
+                statusDiv.style.display = 'none';
+            }, 8000);
+        });
+}
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+
+</script>
+</body>
+</html>
