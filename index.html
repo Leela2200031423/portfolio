@@ -663,13 +663,15 @@
             justify-content: center;
         }
     
-        /* Responsive project section */
-        .responsive-projects {
-            display: flex;
-            justify-content: flex-start;
-            flex-wrap: wrap;
-            padding-left: 4cm;
-        }
+        /* ...existing code... */
+.responsive-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    padding-left: 0;
+}
+/* ...existing code... */
 
         @media screen and (max-width: 768px) {
             .responsive-projects {
@@ -914,6 +916,21 @@
         font-size: 1rem;
     }
 }
+/* ...existing code... */
+.project-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.2s;
+    font-size: 1.3rem;      /* Increased font size */
+    font-weight: 600;       /* Make it bold */
+    display: inline-block;  /* Keeps spacing consistent */
+    margin-bottom: 10px;    /* Adds space below the link */
+}
+/* ...existing code... */
+.project-link:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
 
     </style>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -1058,7 +1075,30 @@
             <div class="projects-container responsive-projects">
                 <div class="project-card">
                     <!-- Using your provided image path -->
-                    <img src="./assets/spring.jpeg" alt="Citizen-Politician Project" class="project-img">
+                    <img src="./assets/ATS-Score.png" alt="ATS Resume Score Generator" class="project-img">
+                    <div class="project-content">
+                         <a href="https://ats-score-generator-app.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+                               ATS Resume Score Generator
+                         </a>
+                        <p>Engineered a secure web app enables direct ATS-Score for the uploaded resume.</p>
+                        <ul>
+                            <li>Developed an AI-powered ATS Resume Score Generator using React.js and Node.js (no database).</li>
+                            <li>Integrated ChatGPT for resume analysis and improvement suggestions via prompt engineering.</li>
+                            <li>Utilized GitHub Copilot to accelerate development and streamline debugging.</li>
+                            <li>Deployed on Vercel for fast performance and high availability.</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">AI Integration</span>
+                            <span class="tech-tag">ChatGPT</span>
+                            <span class="tech-tag">GitHub Copilot</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <!-- Using your provided image path -->
+                    <img src="./assets/Janaseva Portal.jpeg" alt="Citizen-Politician Project" class="project-img">
                     <div class="project-content">
                         <h3>Interaction Between Citizen and Politician</h3>
                         <p>Engineered a secure web app enables direct communication b/t citizens & politicians.</p>
@@ -1080,9 +1120,11 @@
                 
                 <div class="project-card">
                     <!-- Using your provided image path -->
-                    <img src="./assets/bank.jpeg" alt="Banking System Project" class="project-img">
+                    <img src="./assets/B&F.jpeg" alt="Banking System Project" class="project-img">
                     <div class="project-content">
-                        <h3>Banking and Finance Management System</h3>
+                        <a href="https://mswdbankings14.web.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+                               Banking Management System
+                         </a>
                         <p>Engineered a secure and scalable banking system with the modern web technologies.</p>
                         <ul>
                             <li>Implemented role-based access control (RBAC) for secure authentication</li>
